@@ -129,9 +129,9 @@ $(document).ready(function () {
         else
         // THE HANDLING IN CASE ITEM IS CLICKED
         item.click(function () {
-	        item.addClass("clicked-no-slide-anim");
-            var cur = item.data('index');
-            var hashy = window.pageYOffset;
+	        // item.addClass("clicked-no-slide-anim");
+            // var cur = item.data('index');
+            // var hashy = window.pageYOffset;
 
 
 
