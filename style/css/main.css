@@ -1,0 +1,23 @@
+.textoCliente {
+	font-size: 25px;
+}
+
+#textoCliente {
+	font-size: 25px;
+}
+
+	#white-container {
+		padding-top: 15px;
+		padding-left: 30px;
+		padding-right: 30px;
+		border-radius: 25px;
+		text-align: center;
+		width: 50%;
+		height: 25%;
+		background-color: rgba(255,255,255,0.85);
+	}
+
+	#subtitleIndex {
+		font-size: 1em;
+	}
+/*s*/
