@@ -510,7 +510,9 @@
                 </ul>
               </div>
               <div class="select">
-                <div> <a href="#" class="btn inverse">Select Plan</a> </div>
+                <div class="smooth">
+                  <a href="#contact" class="btn inverse" onclick="planSelector('radioPlata')">Select Plan</a>
+                </div>
               </div>
             </div>
           </div>
@@ -519,6 +521,7 @@
             <div class="plan">
               <h3> <span class="featured f1"></span> Oro </h3>
               <h4><span class="amount"><span>$</span>12,500</span></h4>
+
               <div class="features">
                 <ul>
                   <li>7 Days</li>
@@ -528,7 +531,9 @@
                   <li>Enhanced Security</li>
                 </ul>
                 <div class="select">
-                  <div> <a href="#" class="btn inverse">Select Plan</a> </div>
+                  <div class="smooth">
+                    <a href="#contact" class="btn inverse" onclick="planSelector('radioOro')">Select Plan</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -536,23 +541,25 @@
           <!-- /.col-sm-3  -->
           <div class="col-md-4">
             <div class="plan">
-              <h3>Otros Servicios</h3>
-              <h4><span class="amount"><span>Ponte en contacto con nostros</span></span></h4>
+              <h3> <span class="featured f1"></span>Premium</h3>
+              <p style="color:#549DC5; font-size: 32px; font-style: bold;
+              margin-top: 17px; margin-bottom: 17px;">EPALE</p>
               <div class="features">
-                <ul style="color:grey">
-                  <li> <strong>App´s</strong> </li>
-                  <li> <strong>Web a la medida</strong> </li>
-                  <li> <strong>Marketing Digital</strong> </li>
-                  <li> <strong>SEO</strong> </li>
-              
+                <ul>
+                  <li>7 Days</li>
+                  <li>2GB Storage</li>
+                  <li>25 Users</li>
+                  <li>Unlimited Pages</li>
+                  <li>Enhanced Security</li>
                 </ul>
                 <div class="select">
-                  <div> <a href="#" class="btn inverse">Contáctanos</a> </div>
+                  <div class="smooth">
+                    <a href="#contact" class="btn inverse" onclick="planSelector('radioPremium')">Contáctanos</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-         
           <!-- /.col-sm-3  --> 
         </div>
         <!-- /.pricing  --> 
@@ -605,15 +612,34 @@
             <form class="forms" action="contact/form-handler.php" method="post">
               <fieldset>
                 <ol class="row">
-                  <li class="form-row text-input-row name-field col-sm-6">
+                  <li class="form-row text-input-row name-field col-sm-4">
                     <input type="text" name="name" class="text-input defaultText required" title="Nombre (Requerido)"/>
                   </li>
-                  <li class="form-row text-input-row email-field col-sm-6">
+                  <li class="form-row text-input-row email-field col-sm-4">
                     <input type="text" name="email" class="text-input defaultText required email" title="Email (Requerido)"/>
+                  </li>
+<!--                   <li class="form-row text-input-row email-field col-sm-4">
+                    <input type="text" name="asuntoText" class="text-input defaultText" title="Asunto"/> -->
+                  <div class="col-sm-4">
+                    <div class="row" style="margin-top: -20px;">
+                      <div class="col-sm-12">Estoy interesado en:</div>
+                        <div class="radio col-sm-4" style="margin-top: -5px;">
+                        <label><input id="radioPlata" type="radio" name="plan" value="plata" style="margin-left: 0px;">Plan Plata: $7,500</label>
+                        </div>
+                        <div class="radio col-sm-4">
+                        <label><input id="radioOro" type="radio" name="plan" value="oro" style="margin-left: 0px;">Plan Oro: $12,500</label>
+                        </div>
+                        <div class="radio col-sm-4">
+                        <label><input id="radioPremium" type="radio" name="plan" value="premium" style="margin-left: 0px;">Premium: Cotización especial</label>
+                      </div>
+                    </div>
+                  </div>
+
                   </li>
                   <li class="form-row text-area-row col-sm-12">
                     <textarea name="message" class="text-area required" title="Tu mensaje"></textarea>
                   </li>
+                  <p id="textoCliente"></p>
                   <li class="form-row hidden-row">
                     <input type="hidden" name="hidden" value="" />
                   </li>
@@ -710,5 +736,23 @@ function init() {
 <script src="style/js/retina.js"></script> 
 <script src="style/js/google-code-prettify/prettify.js"></script> 
 <script src="style/js/scripts.js"></script>
+
+</script>
+
+<script>
+  function planSelector(divToSelect) {
+
+    document.getElementById(divToSelect).checked = true;
+
+    if(divToSelect=="radioPremium") {
+      document.getElementById("textoCliente").innerHTML = "Sabemos que estás buscando algo especial ¡Estás a un paso de una solución hecha a la medida!";
+    } else if(divToSelect=="radioOro") {
+      document.getElementById("textoCliente").innerHTML = "Porque sabemos que estás buscando algo más, estás a un paso de tu página web con nuestro plan Oro";     
+    } else if(divToSelect=="radioPlata") {
+      document.getElementById("textoCliente").innerHTML = "Estás a un paso de tener tu página web, perro";  
+    }
+
+  }
+</script>
 </body>
 </html>
