@@ -6,23 +6,23 @@
 	font-size: 25px;
 }
 
-	#white-container {
-		padding-top: 15px;
+	/*#white-container {*/
+/*		padding-top: 15px;
 		padding-left: 30px;
 		padding-right: 30px;
 		border-radius: 25px;
 		text-align: center;
 		width: 70%;
 		height: 25%;
-		background-color: rgba(255,255,255,0.85);
+		background-color: rgba(255,255,255,0.85);*/
 	}
 
-	#subtitleIndex {
+/*	#subtitleIndex {
 		font-size: 1em;
-	}
-
+	}*/
+/*
 	@media screen and(min-width: 480px) {
 		.smooth {
 			right: 50px;
 		}
-	}
+	}*/
